@@ -18,5 +18,5 @@ model Project {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @default(now())
   githubLink String
-  published Boolean
+  published Boolean @default(false)
 }
