@@ -33,7 +33,7 @@ export async function addProject(prevState: unknown, formData: FormData) {
   await db.project.create({
     data: {
       name: data.name,
-      descripion: data.description,
+      description: data.description,
       githubLink: data.githubLink,
       imagePath,
     },
@@ -48,3 +48,64 @@ export async function addProject(prevState: unknown, formData: FormData) {
 const editSchema = addSchema.extend({
   image: imageSchema.optional(),
 });
+
+export async function updateProject(
+  id: string,
+  prevState: unknown,
+  formData: FormData
+) {
+  const result = editSchema.safeParse(Object.fromEntries(formData.entries()));
+  if (result.success == false) {
+    return result.error.formErrors.fieldErrors;
+  }
+  const data = result.data;
+  const project = await db.project.findUnique({ where: { id } });
+  if (project == null) return notFound();
+
+  let imagePath = project.imagePath;
+  if (data.image != null && data.image.size > 0) {
+    await fs.unlink(`public${project.imagePath}`);
+    imagePath = `projects/${crypto.randomUUID()}-${data.image.name}`;
+    await fs.writeFile(
+      `public${imagePath}`,
+      Buffer.from(await data.image.arrayBuffer())
+    );
+  }
+
+  await db.project.update({
+    where: { id },
+    data: {
+      name: data.name,
+      description: data.description,
+      githubLink: data.githubLink,
+      imagePath,
+    },
+  });
+
+  revalidatePath("/");
+  revalidatePath("/projects");
+
+  redirect("/admin");
+}
+
+export async function toggleProjectPrivacy({
+  id,
+  published,
+}: {
+  id: string;
+  published: boolean;
+}) {
+  await db.project.update({ where: { id }, data: { published } });
+
+  revalidatePath("/");
+  revalidatePath("/projects");
+}
+
+export async function deleteProject(id: string) {
+  const project = await db.project.delete({ where: { id } });
+  if (project == null) return notFound();
+  await fs.unlink(`public${project.imagePath}`);
+
+  revalidatePath("/");
+  revalidatePath("/projects");
+}
