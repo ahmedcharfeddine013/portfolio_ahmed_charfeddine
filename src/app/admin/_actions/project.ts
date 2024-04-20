@@ -1,3 +1,5 @@
+"use server"
+
 import { z } from "zod";
 import fs from "fs/promises";
 import db from "@/db/db";

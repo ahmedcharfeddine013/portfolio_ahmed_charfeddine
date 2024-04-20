@@ -1,3 +1,5 @@
+'use client'
+
 import { addProject, updateProject } from "@/app/admin/_actions/project";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,13 +29,13 @@ export default function ProjectForm({ project }: { project?: Project | null }) {
         {error.name && <div className="text-red-500">{error.name}</div>}
       </div>
       <div className="space-y-2">
-        <Label htmlFor="github">Github</Label>
+        <Label htmlFor="githubLink">Github</Label>
         <Input
           type="text"
-          id="github"
-          name="github"
+          id="githubLink"
+          name="githubLink"
           required
-          defaultValue={project?.name || ""}
+          defaultValue={project?.githubLink || ""}
         />
         {error.githubLink && (
           <div className="text-red-500">{error.githubLink}</div>
