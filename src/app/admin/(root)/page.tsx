@@ -7,6 +7,7 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
   Table,
@@ -17,7 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import db from "@/db/db";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, MoreVertical, XCircle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import PageHeader from "../../../components/PageHeader";
@@ -102,6 +103,10 @@ async function ProjectsTable() {
             <TableCell>{project.name}</TableCell>
             <TableCell>
               <DropdownMenu>
+              <DropdownMenuTrigger>
+                  <MoreVertical />
+                  <span className="sr-only">Actions</span>
+                </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <PublishedToggleDropdownItem
                     id={project.id}
