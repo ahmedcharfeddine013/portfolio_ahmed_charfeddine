@@ -8,6 +8,9 @@ import expressjs from "../assets/express-109.svg";
 import nodejs from "../assets/nodejs-3.svg";
 import prisma from "../assets/prisma-4.svg";
 import mongoDb from "../assets/mongodb-icon-1.svg";
+import materialUi from "../assets/material-ui-1.svg";
+import tailwindCss from "../assets/tailwind-css-2.svg";
+import bootstrap from "../assest/bootstrap-4.svg";
 
 // import { Linkedin } from "lucide-react";
 // import { Github } from "lucide-react";
@@ -23,6 +26,14 @@ const skills = [
     image: css,
   },
   {
+    skill: "bootstrap",
+    image: bootstrap,
+  },
+  {
+    skill: "tailwind",
+    image: tailwindCss,
+  },
+  {
     skill: "javascript",
     image: js,
   },
@@ -35,13 +46,13 @@ const skills = [
     image: reactjs,
   },
   {
+    skill: "materialUi",
+    image: materialUi,
+  },
+  {
     skill: "nextJs",
     image: nextjs,
   },
-//   {
-//     skill: "expressJs",
-//     image: expressjs,
-//   },
   {
     skill: "nodeJs",
     image: nodejs,
