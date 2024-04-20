@@ -9,11 +9,11 @@ import nodejs from "../assets/nodejs-3.svg";
 import prisma from "../assets/prisma-4.svg";
 import mongoDb from "../assets/mongodb-icon-1.svg";
 
-import { Linkedin } from "lucide-react";
-import { Github } from "lucide-react";
-import { Mail } from "lucide-react";
+// import { Linkedin } from "lucide-react";
+// import { Github } from "lucide-react";
+// import { Mail } from "lucide-react";
 
-export const skills = [
+const skills = [
   {
     skill: "html",
     image: html,
@@ -56,7 +56,7 @@ export const skills = [
   },
 ];
 
-export const SocialMedia = [
+const SocialMedia = [
   {
     title: "Github",
     icon: Github,
@@ -69,3 +69,5 @@ export const SocialMedia = [
   },
   { title: "E-mail", icon: Mail, link: "ahmedcharfeddine75@gmail.com" },
 ];
+
+export { skills, SocialMedia };

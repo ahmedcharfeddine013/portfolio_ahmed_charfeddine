@@ -4,6 +4,7 @@ import { MouseParallax } from "react-just-parallax";
 import Image from "next/image";
 import hero_bg from "../../public/bg.jpg";
 import { ScrollParallax } from "react-just-parallax";
+import SocialMedia from './SocialMedia';
 
 export default function Hero() {
   return (
@@ -19,6 +20,7 @@ export default function Hero() {
             create something amazing!{" "}
           </p>
         </div>
+        <SocialMedia />
       </ScrollParallax>
       <div className=" h-[500px] overflow-hidden  w-screen">
         <div className="absolute h-[500px]  overflow-hidden left-0 top-[0px] w-screen text-violet-700 z-[-50]">
