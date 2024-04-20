@@ -38,10 +38,10 @@ const skills = [
     skill: "nextJs",
     image: nextjs,
   },
-  {
-    skill: "expressJs",
-    image: expressjs,
-  },
+//   {
+//     skill: "expressJs",
+//     image: expressjs,
+//   },
   {
     skill: "nodeJs",
     image: nodejs,
@@ -56,18 +56,18 @@ const skills = [
   },
 ];
 
-const SocialMedia = [
-  {
-    title: "Github",
-    icon: Github,
-    link: "https://github.com/ahmedcharfeddine013",
-  },
-  {
-    title: "Linkedin",
-    icon: Linkedin,
-    link: "https://www.linkedin.com/in/ahmed-charfeddine-677156245/",
-  },
-  { title: "E-mail", icon: Mail, link: "ahmedcharfeddine75@gmail.com" },
-];
+// const SocialMedia = [
+//   {
+//     title: "Github",
+//     icon: Github,
+//     link: "https://github.com/ahmedcharfeddine013",
+//   },
+//   {
+//     title: "Linkedin",
+//     icon: Linkedin,
+//     link: "https://www.linkedin.com/in/ahmed-charfeddine-677156245/",
+//   },
+//   { title: "E-mail", icon: Mail, link: "ahmedcharfeddine75@gmail.com" },
+// ];
 
-export { skills, SocialMedia };
+export { skills };
