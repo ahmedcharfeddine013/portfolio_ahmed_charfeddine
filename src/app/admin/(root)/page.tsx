@@ -4,7 +4,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { DropdownMenu } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+} from "@/components/ui/dropdown-menu";
 import {
   Table,
   TableBody,
@@ -17,6 +20,7 @@ import db from "@/db/db";
 import { CheckCircle2, XCircle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import PageHeader from "../../../components/PageHeader";
 import {
   DeleteDropdownItem,
   PublishedToggleDropdownItem,
@@ -30,7 +34,12 @@ function getProducts() {
 }
 
 export default function AdminPage() {
-  return <div></div>;
+  return (
+    <div>
+      <PageHeader>Projects</PageHeader>
+      <ProjectsTable />
+    </div>
+  );
 }
 
 // function ProjectCard({
@@ -93,14 +102,16 @@ async function ProjectsTable() {
             <TableCell>{project.name}</TableCell>
             <TableCell>
               <DropdownMenu>
-                <PublishedToggleDropdownItem
-                  id={project.id}
-                  published={project.published}
-                />
-                <DeleteDropdownItem
-                  id={project.id}
-                  disabled={project.published === true}
-                />
+                <DropdownMenuContent>
+                  <PublishedToggleDropdownItem
+                    id={project.id}
+                    published={project.published}
+                  />
+                  <DeleteDropdownItem
+                    id={project.id}
+                    disabled={project.published === true}
+                  />
+                </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
           </TableRow>
