@@ -1,6 +1,9 @@
-import PageHeader from '@/components/PageHeader'
-import React from 'react'
-import ProjectForm from '../_components/ProjectForm'
+import PageHeader from "@/components/PageHeader";
+import React from "react";
+import ProjectForm from "../_components/ProjectForm";
+import db from "@/db/db";
+import { Table } from "@/components/ui/table";
+
 
 export default function AddProjectPage() {
   return (
@@ -8,5 +11,7 @@ export default function AddProjectPage() {
       <PageHeader>Add Project</PageHeader>
       <ProjectForm />
     </div>
-  )
+  );
 }
+
+

@@ -90,13 +90,10 @@ export async function updateProject(
   redirect("/admin");
 }
 
-export async function toggleProjectPrivacy({
-  id,
-  published,
-}: {
-  id: string;
-  published: boolean;
-}) {
+export async function toggleProjectPrivacy(
+  id : string,
+  published : boolean,
+) {
   await db.project.update({ where: { id }, data: { published } });
 
   revalidatePath("/");
