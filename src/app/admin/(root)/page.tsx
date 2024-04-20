@@ -38,7 +38,7 @@ function getProducts() {
 
 export default function AdminPage() {
   return (
-    <div>
+    <div className="space-y-6">
       <PageHeader>Projects</PageHeader>
       <ProjectsTable />
     </div>
