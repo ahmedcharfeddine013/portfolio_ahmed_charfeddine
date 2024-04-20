@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Briefcase } from "lucide-react";
 
+
+
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState<string>("home");
   return (
