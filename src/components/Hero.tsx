@@ -8,7 +8,7 @@ import { ScrollParallax } from "react-just-parallax";
 export default function Hero() {
   return (
     <div className=" max-w-full w-full h-[500px] flex flex-col  items-center justify-center ">
-      <ScrollParallax strength={0.1}     >
+      <ScrollParallax strength={0.1}>
         <div className="text-center flex items-center justify-center flex-col space-y-4 h-full z-50">
           <h1 className="text-3xl">
             Hi, I am <span className="text-blue-400">Ahmed Charfeddine</span>
