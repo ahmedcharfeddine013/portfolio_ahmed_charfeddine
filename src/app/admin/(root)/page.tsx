@@ -7,6 +7,7 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -26,6 +27,7 @@ import {
   DeleteDropdownItem,
   PublishedToggleDropdownItem,
 } from "../_components/ProjectActions";
+import Link from "next/link";
 
 function getProducts() {
   return db.project.findMany({
@@ -103,11 +105,17 @@ async function ProjectsTable() {
             <TableCell>{project.name}</TableCell>
             <TableCell>
               <DropdownMenu>
-              <DropdownMenuTrigger>
+                <DropdownMenuTrigger>
                   <MoreVertical />
                   <span className="sr-only">Actions</span>
                 </DropdownMenuTrigger>
+
                 <DropdownMenuContent>
+                  <DropdownMenuItem asChild>
+                    <Link href={`/admin/project/${project.id}/edit`}>
+                      Edit
+                    </Link>
+                  </DropdownMenuItem>
                   <PublishedToggleDropdownItem
                     id={project.id}
                     published={project.published}
