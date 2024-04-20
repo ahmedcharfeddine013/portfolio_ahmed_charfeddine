@@ -1,3 +1,5 @@
+import Navbar from "@/components/Navbar";
+
 export const dynamic = "force-dynamic";
 
 export default function Layout({
@@ -7,7 +9,9 @@ export default function Layout({
 }>) {
   return (
     <>
-      <div className="container my-6">{children}</div>
+      <div className=" px-6 w-screen">
+        <Navbar />
+        {children}</div>
     </>
   );
 }
