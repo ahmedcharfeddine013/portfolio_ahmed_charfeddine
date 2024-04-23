@@ -2,7 +2,7 @@
 import db from "@/db/db";
 import { Project } from "@prisma/client";
 import React, { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
 import PageHeader from "./PageHeader";
 
@@ -46,15 +46,15 @@ type ProjectCardProps = {
 
 function ProjectCard({ id, name, imagePath, description }: ProjectCardProps) {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="flex flex-col items-center justify-center relative h-[400px] w-[300px] overflow-hidden ">
+      <div>
+        <Image src={imagePath} alt="name" objectFit="cover" fill  />
+      </div>
+
+      <CardHeader className="absolute bottom-0 items-center flex justify-center text-center bg-gray-900/80 backdrop-blur-md w-full rounded-t-lg">
         <CardTitle>{name}</CardTitle>
+        <CardDescription>{description.slice(0, 80)}...</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div>
-          <Image src={imagePath} alt="name" height={200} width={200} />
-        </div>
-      </CardContent>
     </Card>
   );
 }
