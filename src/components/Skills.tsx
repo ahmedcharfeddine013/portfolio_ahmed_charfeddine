@@ -4,7 +4,7 @@ import Image from "next/image";
 import PageHeader from "./PageHeader";
 export default function Skills() {
   return (
-    <div className="flex items-center justify-center flex-col space-y-10">
+    <div className="flex items-center justify-center flex-col space-y-10" id="skills">
       <PageHeader>Skills</PageHeader>
       <div className="flex flex-row flex-wrap items-center justify-center gap-5">
         {skills.map((skill) => (
