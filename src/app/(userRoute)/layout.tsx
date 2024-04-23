@@ -9,10 +9,13 @@ export default function Layout({
 }>) {
   return (
     <>
-      <div className=" px-6 w-screen">
+      <div className="w-screen">
         <Navbar />
         {/* <Nav /> */}
+        <div className="px-10">
+
         {children}
+        </div>
       </div>
     </>
   );
