@@ -11,7 +11,9 @@ export default function Layout({
     <>
       <div className=" px-6 w-screen">
         <Navbar />
-        {children}</div>
+        {/* <Nav /> */}
+        {children}
+      </div>
     </>
   );
 }
