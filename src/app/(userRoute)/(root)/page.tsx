@@ -5,10 +5,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col gap-20 ">
       <Hero />
-      <Skills />
-      <Projects />
+      <div className="w-[90%] mx-auto space-y-10">
+        <Skills />
+        <Projects />
+      </div>
     </main>
   );
 }

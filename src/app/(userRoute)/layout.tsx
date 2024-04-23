@@ -16,13 +16,9 @@ export default function Layout({
 }>) {
   return (
     <>
-      {/* <Head>
-        <link rel="icon" href="/Logo.png" sizes="64x64" type="image/png" />
-      </Head> */}
-      <div className="w-screen">
+      <div>
         <Navbar />
-        {/* <Nav /> */}
-        <div className="px-10">{children}</div>
+        <div>{children}</div>
       </div>
     </>
   );
