@@ -17,7 +17,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex items-center justify-center flex-col space-y-8"
+      className="flex items-center justify-center flex-col space-y-8 pt-10"
     >
       <PageHeader>Projects</PageHeader>
       <div className="flex flex-wrap items-center justify-center">

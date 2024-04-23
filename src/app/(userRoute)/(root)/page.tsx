@@ -5,9 +5,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-20 ">
-      <Hero />
-      <div className="w-[90%] mx-auto space-y-10">
+    <main className="flex flex-col gap-20 pb-10">
+      <div className="px-10">
+        <Hero />
+      </div>
+      <div className="mx-auto px-10 space-y-10">
         <Skills />
         <Projects />
       </div>

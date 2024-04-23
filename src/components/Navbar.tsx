@@ -40,31 +40,47 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`flex flex-row space-x-4 fixed w-screen justify-center lg:justify-between items-center px-10 z-50 duration-100 transition-all ease-in ${scrolling && hide ? 'bg-gray-900/80 backdrop-blur-md' : 'bg-transparent'}`}>
+    <nav
+      className={`flex flex-row space-x-4 fixed w-screen justify-center lg:justify-between items-center px-10 z-50 duration-100 transition-all ease-in ${
+        scrolling && hide ? "bg-gray-900/80 backdrop-blur-md" : "bg-transparent"
+      }`}
+    >
       <div
         className={`absolute lg:relative flex flex-col w-84 space-y-8 lg:flex-row h-screen top-0 left-0  bg-opacity-20 lg:h-full lg:bg-transparent lg:space-y-0 lg:justify-between lg:w-full justify-center items-center text-center lg:items-center lg:py6 py-8 px-8  ease-in transform transition-all duration-100  ${
-          toggled ? "translate-x-0 bg-gray-900/80 backdrop-blur-md" : "translate-x-[-100%] lg:translate-x-0 bg-transparent"
+          toggled
+            ? "translate-x-0 bg-gray-900/80 backdrop-blur-md"
+            : "translate-x-[-100%] lg:translate-x-0 bg-transparent"
         }`}
       >
         <ul className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 text-xl">
           <li className="relative ">
-            <Link href="#">Home</Link>
+            <Link href="#" onClick={() => setToggled(false)}>
+              Home
+            </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
           <li className="relative">
-            <Link href="#skills">Skills</Link>
+            <Link href="#skills" onClick={() => setToggled(false)}>
+              Skills
+            </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
           <li className="relative">
-            <Link href="#projects">Featured projects</Link>
+            <Link href="#projects" onClick={() => setToggled(false)}>
+              Featured projects
+            </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
           <li className="relative">
-            <Link href="#about-me">About me</Link>
+            <Link href="#about-me" onClick={() => setToggled(false)}>
+              About me
+            </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
           <li className="relative">
-            <Link href="#contact-me">Contact me</Link>
+            <Link href="#contact-me" onClick={() => setToggled(false)}>
+              Contact me
+            </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
         </ul>
