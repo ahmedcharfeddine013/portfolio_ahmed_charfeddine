@@ -68,7 +68,7 @@ export default function Navbar() {
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
         </ul>
-        <Button className="flex flex-row gap-4">
+        <Button className="flex flex-row gap-4 text-blue-400">
           View Resume <Briefcase />{" "}
         </Button>
       </div>
