@@ -70,7 +70,7 @@ export default function Navbar() {
       <Button
         className="absolute top-8 right-8 flex lg:hidden"
         onClick={() => setToggled(true)}
-        style={{ display: toggled && !hide  ? "none" : "flex" }}
+        style={{ display: toggled || hide  ? "none" : "flex" }}
       >
         <Menu />
       </Button>
