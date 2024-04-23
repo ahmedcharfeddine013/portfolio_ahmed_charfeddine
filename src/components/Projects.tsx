@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import Image from "next/image";
 import PageHeader from "./PageHeader";
 
+
+
 async function getProjects() {
   return db.project.findMany({
     where: { published: true },
