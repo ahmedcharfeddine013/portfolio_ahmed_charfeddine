@@ -74,13 +74,13 @@ export default function Navbar() {
       </div>
       <Button
         onClick={() => setToggled(false)}
-        className=" absolute top-8 right-8 lg:hidden cursor-pointer"
+        className=" absolute top-8 right-8 lg:hidden cursor-pointer text-purple-700"
         style={{ display: toggled && !hide ? "flex" : "none" }}
       >
         <X />
       </Button>
       <Button
-        className="absolute top-8 right-8 flex lg:hidden"
+        className="absolute top-8 right-8 flex lg:hidden text-purple-700"
         onClick={() => setToggled(true)}
         style={{ display: toggled || hide ? "none" : "flex" }}
       >
