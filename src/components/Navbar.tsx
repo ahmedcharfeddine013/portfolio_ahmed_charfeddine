@@ -28,7 +28,7 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <nav className="flex flex-row space-x-4 w-full justify-between items-center z-50 ">
+    <nav className="flex flex-row space-x-4 fixed px-10 w-full justify-center lg:justify-between items-center z-50 ">
       <div
         className={`relative lg:flex flex-col space-y-8 lg:flex-row  top-0 right-0  h-full bg-opacity-20 lg:space-y-0 lg:justify-between w-full  items-center text-center lg:items-center lg:py6 py-8 px-8  transition-opacity duration-100  ${
           toggled ? "flex" : " hidden"

@@ -8,7 +8,7 @@ import SocialMedia from './SocialMedia';
 
 export default function Hero() {
   return (
-    <div className=" w-full h-[500px] flex flex-col  items-center justify-center ">
+    <div className=" w-full h-[500px] z-10 flex flex-col  items-center justify-center ">
       <ScrollParallax strength={0.1}>
         <div className="text-center flex items-center justify-center flex-col space-y-4 h-full ">
           <h1 className="text-3xl">
