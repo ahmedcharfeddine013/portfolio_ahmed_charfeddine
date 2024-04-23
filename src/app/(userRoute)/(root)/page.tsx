@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-20 pb-10">
+    <main className="flex flex-col gap-20 pb-10 w-screen">
       <div className="px-10">
         <Hero />
       </div>
