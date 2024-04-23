@@ -9,6 +9,7 @@ import { Menu } from "lucide-react";
 export default function Navbar() {
   const [toggled, setToggled] = useState(false);
   const [hide, setHide] = useState<boolean>();
+  const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,16 +22,26 @@ export default function Navbar() {
       }
     };
 
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
     window.addEventListener("resize", handleResize);
-    handleResize();
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <nav className="flex flex-row space-x-4 fixed w-screen justify-center lg:justify-between items-center z-50 ">
       <div
-        className={`absolute lg:relative flex flex-col w-84 space-y-8 lg:flex-row bg-blue-800/80  h-screen top-0 left-0  bg-opacity-20 lg:h-full lg:bg-transparent lg:space-y-0 lg:justify-between lg:w-full justify-center items-center text-center lg:items-center lg:py6 py-8 px-8  ease-in transition-transform duration-300  ${
+        className={`absolute lg:relative flex flex-col w-84 space-y-8 lg:flex-row    h-screen top-0 left-0  bg-opacity-20 lg:h-full lg:bg-transparent lg:space-y-0 lg:justify-between lg:w-full justify-center items-center text-center lg:items-center lg:py6 py-8 px-8  ease-in transition-transform duration-300  ${
           toggled ? "translate-x-0" : "translate-x-[-100%] lg:translate-x-0"
         }`}
       >
@@ -70,7 +81,7 @@ export default function Navbar() {
       <Button
         className="absolute top-8 right-8 flex lg:hidden"
         onClick={() => setToggled(true)}
-        style={{ display: toggled || hide  ? "none" : "flex" }}
+        style={{ display: toggled || hide ? "none" : "flex" }}
       >
         <Menu />
       </Button>
