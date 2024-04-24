@@ -65,3 +65,7 @@
 li:hover > span {
   width: 100%;
 }
+
+a:hover > span {
+  width: 100%;
+}

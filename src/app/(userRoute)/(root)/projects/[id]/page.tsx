@@ -38,12 +38,16 @@ export default async function ProjectPage({
 
         {/* right side  */}
         <div>
-          <Card className="w-full flex flex-col">
+          <Card className="w-full flex flex-col border-2 border-purple-700">
             <CardHeader>
-              <CardTitle> {project.name}</CardTitle>
+              <CardTitle className="text-blue-400"> {project.name}</CardTitle>
               <CardContent>
-                <a href={project.githubLink} className="flex flex-row items-center gap-10 ">
+                <a
+                  href={project.githubLink}
+                  className="flex flex-row items-center gap-5 relative w-fit"
+                >
                   {project.githubLink} <SquareArrowOutUpRight />{" "}
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300"></span>
                 </a>
               </CardContent>
               <CardDescription> {project.description}</CardDescription>
