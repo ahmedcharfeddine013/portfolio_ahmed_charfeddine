@@ -21,39 +21,14 @@ export default function Projects() {
     >
       <PageHeader>Projects</PageHeader>
       <div className="flex flex-wrap items-center justify-center">
-        <ProjectsFetcher projectFetcher={getProjects} />
+        {/* <ProjectsFetcher projectFetcher={getProjects} /> */}
       </div>
     </section>
   );
 }
 
-async function ProjectsFetcher({
-  projectFetcher,
-}: {
-  projectFetcher: () => Promise<Project[]>;
-}) {
-  return (await projectFetcher()).map((project) => (
-    <ProjectCard key={project.id} {...project} />
-  ));
-}
 
-type ProjectCardProps = {
-  name: string;
-  description: string;
-  imagePath: string;
-};
 
-function ProjectCard({ name, imagePath, description }: ProjectCardProps) {
-  return (
-    <Card className="flex flex-col items-center justify-center relative h-[400px] w-[300px] overflow-hidden ">
-      <div>
-        <Image src={imagePath} alt="name" objectFit="cover" fill />
-      </div>
 
-      <CardHeader className="absolute bottom-0 items-center flex justify-center text-center bg-gray-900/80 backdrop-blur-md w-full rounded-t-lg">
-        <CardTitle>{name}</CardTitle>
-        <CardDescription>{description.slice(0, 80)}...</CardDescription>
-      </CardHeader>
-    </Card>
-  );
-}
+
+
