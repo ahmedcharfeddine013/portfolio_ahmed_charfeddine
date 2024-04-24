@@ -21,7 +21,7 @@ export default function AboutMePage() {
               motivated me to get into <span>Frontend Development</span>
             </p> */}
             <p>
-              👋 I&apos;m [Ahmed Charfeddine], a budding talent in the world of
+              👋 I&apos;m <span>Ahmed Charfeddine</span>, a budding talent in the world of
               technology, specializing in <span>Frontend Development</span>. 🎓
               Armed with a solid foundation in Mathematics from my recent{" "}
               <span>Baccalaureat</span>, I&apos;ve embarked on an exciting
