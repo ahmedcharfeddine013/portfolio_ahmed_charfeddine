@@ -54,25 +54,25 @@ export default function Navbar() {
       >
         <ul className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 text-xl">
           <li className="relative ">
-            <Link href="#" onClick={() => setToggled(false)}>
+            <Link href="/" onClick={() => setToggled(false)}>
               Home
             </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
-          <li className="relative">
+          {/* <li className="relative">
             <Link href="#skills" onClick={() => setToggled(false)}>
               Skills
             </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
-          </li>
+          </li> */}
           <li className="relative">
-            <Link href="#projects" onClick={() => setToggled(false)}>
+            <Link href="/projects" onClick={() => setToggled(false)}>
               Featured projects
             </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
           <li className="relative">
-            <Link href="#about-me" onClick={() => setToggled(false)}>
+            <Link href="/about" onClick={() => setToggled(false)}>
               About me
             </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>

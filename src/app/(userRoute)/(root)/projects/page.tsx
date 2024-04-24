@@ -13,9 +13,11 @@ async function getProjects() {
 
 export default function ProjectsPage() {
   return (
-    <div>
+    <div className="p-[8rem] flex flex-col items-center space-y-10">
       <PageHeader>Projects</PageHeader>
-      <ProjectsFetcher projectFetcher={getProjects} />
+      <div className="flex flex-wrap items-center justify-center">
+        <ProjectsFetcher projectFetcher={getProjects} />
+      </div>
     </div>
   );
 }
