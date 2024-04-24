@@ -14,7 +14,7 @@ async function getProjects() {
 
 export default function ProjectsPage() {
   return (
-    <div className="p-[8rem] flex flex-col items-center space-y-10">
+    <div className="py-10 mx-10 lg:py-[8rem] flex flex-col items-center space-y-10">
       <PageHeader>Projects</PageHeader>
       <div className="flex flex-wrap items-center justify-center">
         <Suspense
