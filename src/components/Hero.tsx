@@ -15,7 +15,7 @@ export default function Hero() {
           <h1 className="text-3xl">
             Hi, I am
             <TypeAnimation
-              sequence={[" Ahmed Charfeddine", 5000, "", 5000]}
+              sequence={[" Ahmed Charfeddine", 5000, "", 1000]}
               wrapper="span"
               repeat={Infinity}
               className="text-blue-400 font-bold"
