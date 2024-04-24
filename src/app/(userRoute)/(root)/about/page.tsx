@@ -10,7 +10,7 @@ export default function AboutMePage() {
       <PageHeader>About Me</PageHeader>
       <div className=" flex flex-col items-center justify-center gap-10 lg:grid lg:grid-cols-2 w-full h-full lg:items-center  lg:place-items-center">
         {/* Left Side  */}
-        <div className="flex items-start justify-center flex-col space-y-4">
+        <div className="flex items-center text-center md:text-start lg:items-start justify-center flex-col space-y-4">
           <h1 className="text-2xl font-bold">Want to know more about me?</h1>
           <div>
             {/* <p>
