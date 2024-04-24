@@ -2,6 +2,7 @@ import React from "react";
 import PageHeader from "../../../../components/PageHeader";
 import Image from "next/image";
 import logo from "../../../../../public/Logo.png";
+import SocialMedia from "../../../../components/SocialMedia";
 
 export default function AboutMePage() {
   return (
@@ -41,6 +42,10 @@ export default function AboutMePage() {
         <div>
           <Image src={logo} width={300} height={300} alt="Ac" />
         </div>
+      </div>
+      <div className="flex items-center flex-col gap-5">
+        <h6>Let&apos;s Connect</h6>
+        <SocialMedia />
       </div>
     </div>
   );
