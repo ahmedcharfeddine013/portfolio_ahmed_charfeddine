@@ -59,12 +59,6 @@ export default function Navbar() {
             </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
-          {/* <li className="relative">
-            <Link href="#skills" onClick={() => setToggled(false)}>
-              Skills
-            </Link>
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
-          </li> */}
           <li className="relative">
             <Link href="/projects" onClick={() => setToggled(false)}>
               Featured projects
@@ -74,12 +68,6 @@ export default function Navbar() {
           <li className="relative">
             <Link href="/about" onClick={() => setToggled(false)}>
               About me
-            </Link>
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
-          </li>
-          <li className="relative">
-            <Link href="#contact-me" onClick={() => setToggled(false)}>
-              Contact me
             </Link>
             <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300"></span>
           </li>
