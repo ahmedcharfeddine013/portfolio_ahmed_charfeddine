@@ -16,7 +16,7 @@ export default function ProjectsPage() {
   return (
     <div className="py-10 mx-10 lg:py-[8rem] flex flex-col items-center space-y-10">
       <PageHeader>Projects</PageHeader>
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-center justify-center gap-10">
         <Suspense
           fallback={
             <div className="flex flex-wrap gap-10">

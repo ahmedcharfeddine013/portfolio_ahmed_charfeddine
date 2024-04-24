@@ -28,6 +28,7 @@ import {
   PublishedToggleDropdownItem,
 } from "../_components/ProjectActions";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 function getProducts() {
   return db.project.findMany({
@@ -39,7 +40,12 @@ function getProducts() {
 export default function AdminPage() {
   return (
     <div className="space-y-6">
-      <PageHeader>Projects</PageHeader>
+      <div className="w-full flex flex-row justify-between">
+        <PageHeader>Projects</PageHeader>
+        <Button>
+          <Link href={"/admin/project/new"} className="text-purple-700">Add Project</Link>
+        </Button>
+      </div>
       <ProjectsTable />
     </div>
   );
@@ -112,9 +118,7 @@ async function ProjectsTable() {
 
                 <DropdownMenuContent>
                   <DropdownMenuItem asChild>
-                    <Link href={`/admin/project/${project.id}/edit`}>
-                      Edit
-                    </Link>
+                    <Link href={`/admin/project/${project.id}/edit`}>Edit</Link>
                   </DropdownMenuItem>
                   <PublishedToggleDropdownItem
                     id={project.id}
