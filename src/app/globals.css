@@ -54,7 +54,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground  ;
+    @apply bg-background text-foreground;
+  }
+
+  p > span {
+    @apply text-blue-400 font-bold;
   }
 }
 
