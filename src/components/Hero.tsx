@@ -51,18 +51,11 @@ export default function Hero() {
           <h1 className="text-3xl">
             Hi, I am
             <TypeAnimation
-              sequence={[
-                " Ahmed Charfeddine",
-                1000,
-                () => {
-                  console.log("Sequence completed");
-                },
-              ]}
+              sequence={[" Ahmed Charfeddine", 5000, "", 5000]}
               wrapper="span"
               repeat={Infinity}
               className="text-blue-400 font-bold"
               deletionSpeed={50}
-              omitDeletionAnimation={true}
               speed={50}
             ></TypeAnimation>
           </h1>
