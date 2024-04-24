@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Image from "next/image";
+import Technologies from '../../../components/Technologies';
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
         <Hero />
       </div>
       <div className="mx-auto px-10 space-y-10">
-        <Skills />
-        <Projects />
+        <Technologies />
+        {/* <Skills /> */}
+        {/* <Projects /> */}
       </div>
     </main>
   );
