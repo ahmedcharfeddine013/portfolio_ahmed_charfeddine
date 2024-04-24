@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { MouseParallax } from "react-just-parallax";
 import Image from "next/image";
 import hero_bg from "../../public/bg.jpg";

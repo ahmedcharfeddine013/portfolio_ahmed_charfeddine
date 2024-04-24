@@ -19,11 +19,11 @@ export default function ProjectsPage() {
       <div className="flex flex-wrap items-center justify-center">
         <Suspense
           fallback={
-            <>
+            <div className="flex flex-wrap gap-10">
               <ProductCardSkeleton />
               <ProductCardSkeleton />
               <ProductCardSkeleton />
-            </>
+            </div>
           }
         >
           <ProjectsFetcher projectFetcher={getProjects} />
