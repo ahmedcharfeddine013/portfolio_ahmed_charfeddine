@@ -7,16 +7,17 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Suspense } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
 type ProjectCardProps = {
-  id: string;
+  id: number;
   name: string;
   description: string;
-  imagePath: string;
+  imagePath: StaticImageData;
+  
 };
 
 export default function ProjectCard({
