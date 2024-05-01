@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <nav
       className={`flex flex-row space-x-4 fixed w-screen justify-center lg:justify-between items-center px-10 z-50 duration-100 transition-all ease-in ${
-        scrolling && hide ? "bg-gray-900/80 backdrop-blur-md" : "bg-transparent"
+        scrolling && hide ? "bg-blue-500/80 backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div

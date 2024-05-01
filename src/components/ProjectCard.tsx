@@ -38,8 +38,8 @@ export default function ProjectCard({
           />
         </div>
         <CardHeader className="absolute bottom-0 items-center flex justify-center text-center bg-gray-900/80 backdrop-blur-md w-full rounded-t-lg">
-          <CardTitle>{name}</CardTitle>
-          <CardDescription>{description.slice(0, 80)}...</CardDescription>
+          <CardTitle className="text-blue-500">{name}</CardTitle>
+          <CardDescription className="text-white">{description.slice(0, 80)}...</CardDescription>
         </CardHeader>
       </Link>
     </Card>
