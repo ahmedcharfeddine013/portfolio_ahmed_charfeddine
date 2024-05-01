@@ -13,15 +13,15 @@ import { SquareArrowOutUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowBigLeft } from "lucide-react";
+import { projects } from "@/data/projects";
 
 export default async function ProjectPage({
   params: { id },
 }: {
   params: { id: string };
 }) {
-  const project = await db.project.findUnique({
-    where: { published: true, id },
-  });
+  const project = projects.find((project) => project.id === id);
+
 
   if (project == null) return notFound();
 
