@@ -5,13 +5,6 @@ import React, { Suspense } from "react";
 import PageHeader from "../../../../components/PageHeader";
 import { projects } from "@/data/projects";
 
-async function getProjects() {
-  return db.project.findMany({
-    where: { published: true },
-    orderBy: { createdAt: "desc" },
-  });
-}
-
 export default function ProjectsPage() {
   return (
     <div className="py-10 mx-10 lg:py-[8rem] flex flex-col items-center space-y-10">
