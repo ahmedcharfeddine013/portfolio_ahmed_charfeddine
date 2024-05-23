@@ -12,8 +12,6 @@ export default function Home() {
       </div>
       <div className="mx-auto px-10 space-y-10">
         <Technologies />
-        {/* <Skills /> */}
-        {/* <Projects /> */}
       </div>
     </main>
   );

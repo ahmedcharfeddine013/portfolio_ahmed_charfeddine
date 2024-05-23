@@ -13,7 +13,7 @@ export default function Technologies() {
 
 function TechnologiesCard() {
   return (
-    <Card className="border-2 border-blue-700/50 rounded p-4 space-y-6 ">
+    <Card className="border-2 border-blue-700/50 rounded p-4 space-y-6">
       <CardTitle>Experience with:</CardTitle>
       <ul className="">
         <li>Bootstrap</li>
