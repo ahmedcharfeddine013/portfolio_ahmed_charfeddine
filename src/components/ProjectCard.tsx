@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Suspense } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
@@ -16,7 +16,7 @@ type ProjectCardProps = {
   id: string;
   name: string;
   description: string;
-  imagePath: string;
+  imagePath: StaticImageData;
 };
 
 export default function ProjectCard({
@@ -27,7 +27,10 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Card className=" relative h-[400px] w-[300px] overflow-hidden ">
-      <Link href={`/projects/${id}`} className="flex flex-col items-center justify-center">
+      <Link
+        href={`/projects/${id}`}
+        className="flex flex-col items-center justify-center"
+      >
         <div>
           <Image
             src={imagePath}
@@ -39,7 +42,9 @@ export default function ProjectCard({
         </div>
         <CardHeader className="absolute bottom-0 items-center flex justify-center text-center bg-gray-900/80 backdrop-blur-md w-full rounded-t-lg">
           <CardTitle className="text-blue-500">{name}</CardTitle>
-          <CardDescription className="text-white">{description.slice(0, 80)}...</CardDescription>
+          <CardDescription className="text-white">
+            {description.slice(0, 80)}...
+          </CardDescription>
         </CardHeader>
       </Link>
     </Card>
